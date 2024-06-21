@@ -1,0 +1,30 @@
+What is a class?
+    A class is a code template for creating objects. Objects have member variables and have behaviour associated with them.
+    In python a class is created by the keyword class.
+
+What is an instance?
+    An object is created using the constructor of the class will then be called the instance of the class.
+
+What is encapsulation?
+    Encapsulation is one of the fundamental concepts in object-oriented programming (OOP).
+    It describes the idea of wrapping data and the methods that work on data within one unit.
+    This puts restrictions on accessing variables and methods directly and can prevent the accidental modification of data
+
+What is abstraction?
+    Abstraction in python is defined as a process of handling complexity by hiding unnecessary information from the user.
+
+What is inheritance?
+    Inheritance allows us to define a class that inherits all the methods and properties from another class.
+    Parent class is the class being inherited from, also called base class.
+    Child class is the class that inherits from another class, also called derived class.
+
+What is multiple inheritance?
+    When a class is derived from more than one base class it is called multiple Inheritance.
+    The derived class inherits all the features of the base case.
+
+What is polymorphism?
+    Polymorphism is often used in Class methods, where we can have multiple classes with the same method name
+
+What is method resolution order or MRO?
+The Method Resolution Order (MRO) is the set of rules that construct the linearization.
+In the Python literature, the idiom "the MRO of C" is also used as a synonymous for the linearization of the class C.

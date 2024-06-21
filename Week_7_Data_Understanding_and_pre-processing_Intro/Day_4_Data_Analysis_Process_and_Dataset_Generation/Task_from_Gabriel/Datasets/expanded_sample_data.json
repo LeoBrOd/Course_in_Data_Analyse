@@ -1,0 +1,222 @@
+[
+    {
+        "user": "gavi",
+        "retweets": 100,
+        "content": "Joe biden vs trump is easy win for who?",
+        "replies": [
+            {
+                "name": "Alex",
+                "content": "this is great",
+                "likes": 100
+            },
+            {
+                "name": "Artem",
+                "content": "trump",
+                "likes": 100
+            },
+            {
+                "name": "Ella",
+                "content": "Let's wait and see",
+                "likes": 30
+            }
+        ]
+    },
+    {
+        "user": "maria",
+        "retweets": 150,
+        "content": "Climate change is real and urgent.",
+        "replies": [
+            {
+                "name": "John",
+                "content": "Absolutely agree!",
+                "likes": 200
+            },
+            {
+                "name": "Doe",
+                "content": "It's a hoax",
+                "likes": 50
+            },
+            {
+                "name": "Mark",
+                "content": "Need more data",
+                "likes": 75
+            }
+        ]
+    },
+    {
+        "user": "daniel",
+        "retweets": 50,
+        "content": "Python is the best programming language.",
+        "replies": [
+            {
+                "name": "Alice",
+                "content": "I love Python!",
+                "likes": 120
+            },
+            {
+                "name": "Bob",
+                "content": "Java is better",
+                "likes": 90
+            },
+            {
+                "name": "Charlie",
+                "content": "Python is versatile",
+                "likes": 110
+            }
+        ]
+    },
+    {
+        "user": "susan",
+        "retweets": 200,
+        "content": "Healthy eating leads to a healthy life.",
+        "replies": [
+            {
+                "name": "Rick",
+                "content": "Absolutely!",
+                "likes": 180
+            },
+            {
+                "name": "Morty",
+                "content": "What about exercise?",
+                "likes": 95
+            },
+            {
+                "name": "Beth",
+                "content": "Balanced diet is key",
+                "likes": 120
+            }
+        ]
+    },
+    {
+        "user": "john",
+        "retweets": 80,
+        "content": "The future of AI is bright.",
+        "replies": [
+            {
+                "name": "Dave",
+                "content": "Indeed it is!",
+                "likes": 110
+            },
+            {
+                "name": "Eva",
+                "content": "Scary but exciting",
+                "likes": 150
+            },
+            {
+                "name": "Liam",
+                "content": "We need to be cautious",
+                "likes": 130
+            }
+        ]
+    },
+    {
+        "user": "alice",
+        "retweets": 130,
+        "content": "Traveling opens your mind.",
+        "replies": [
+            {
+                "name": "Nina",
+                "content": "Totally agree!",
+                "likes": 140
+            },
+            {
+                "name": "Oscar",
+                "content": "Travel is the best teacher",
+                "likes": 100
+            },
+            {
+                "name": "Paul",
+                "content": "Expensive but worth it",
+                "likes": 90
+            }
+        ]
+    },
+    {
+        "user": "bob",
+        "retweets": 60,
+        "content": "The impact of blockchain technology.",
+        "replies": [
+            {
+                "name": "Quinn",
+                "content": "Revolutionary",
+                "likes": 160
+            },
+            {
+                "name": "Rachel",
+                "content": "Still skeptical",
+                "likes": 40
+            },
+            {
+                "name": "Sam",
+                "content": "Huge potential",
+                "likes": 130
+            }
+        ]
+    },
+    {
+        "user": "charlie",
+        "retweets": 90,
+        "content": "Renewable energy is the future.",
+        "replies": [
+            {
+                "name": "Tina",
+                "content": "We need more investments",
+                "likes": 150
+            },
+            {
+                "name": "Uma",
+                "content": "Solar power all the way",
+                "likes": 110
+            },
+            {
+                "name": "Vince",
+                "content": "What about wind energy?",
+                "likes": 95
+            }
+        ]
+    },
+    {
+        "user": "david",
+        "retweets": 40,
+        "content": "Learning new languages is fun.",
+        "replies": [
+            {
+                "name": "Will",
+                "content": "Absolutely!",
+                "likes": 85
+            },
+            {
+                "name": "Xander",
+                "content": "It's challenging but rewarding",
+                "likes": 70
+            },
+            {
+                "name": "Yara",
+                "content": "I love learning Spanish",
+                "likes": 95
+            }
+        ]
+    },
+    {
+        "user": "emily",
+        "retweets": 170,
+        "content": "Meditation helps reduce stress.",
+        "replies": [
+            {
+                "name": "Zara",
+                "content": "I meditate daily",
+                "likes": 180
+            },
+            {
+                "name": "Adam",
+                "content": "Need to try this",
+                "likes": 110
+            },
+            {
+                "name": "Bella",
+                "content": "It's a life changer",
+                "likes": 140
+            }
+        ]
+    }
+]
