@@ -1,0 +1,1274 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20242.24.0711.1636                               -->
+<workbook original-version='18.1' source-build='2024.2.1 (20242.24.0711.1636)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Orders+ (Acropolis_Retail_data_update)' inline='true' name='federated.002mj8e1mjwkjw16j0oax0ek6l3t' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Acropolis_Retail_data_update' name='excel-direct.10hm6q013jiqcf1cbkj2y03ftrs7'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Leo/Course_in_Data_Analyse/Week_19_Tools_Tableau_And_Power_BI/Day_5_Mini_Project_Day/Daily_Challenge_Inventory_Analysis_in_Tableau/Datasources/Acropolis_Retail_data_update.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.10hm6q013jiqcf1cbkj2y03ftrs7' name='Orders' table='[Orders$]' type='table'>
+          <columns gridOrigin='A1:E13334:no:A1:E13334:0' header='yes' outcome='2'>
+            <column datatype='integer' name='Invoice_No' ordinal='0' />
+            <column datatype='string' name='SKU-ID' ordinal='1' />
+            <column datatype='integer' name='Quantity' ordinal='2' />
+            <column datatype='date' name='Invoice_Date' ordinal='3' />
+            <column datatype='string' name='Customer_Country' ordinal='4' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='excel-direct.10hm6q013jiqcf1cbkj2y03ftrs7' name='Orders' table='[Orders$]' type='table'>
+            <columns gridOrigin='A1:E13334:no:A1:E13334:0' header='yes' outcome='2'>
+              <column datatype='integer' name='Invoice_No' ordinal='0' />
+              <column datatype='string' name='SKU-ID' ordinal='1' />
+              <column datatype='integer' name='Quantity' ordinal='2' />
+              <column datatype='date' name='Invoice_Date' ordinal='3' />
+              <column datatype='string' name='Customer_Country' ordinal='4' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.10hm6q013jiqcf1cbkj2y03ftrs7' name='Stock' table='[Stock$]' type='table'>
+            <columns gridOrigin='A1:M105:no:A1:M105:0' header='yes' outcome='2'>
+              <column datatype='string' name='SKU-ID' ordinal='0' />
+              <column datatype='string' name='Description' ordinal='1' />
+              <column datatype='integer' name='2020_units_sold' ordinal='2' />
+              <column datatype='integer' name='2021_start_stock' ordinal='3' />
+              <column datatype='real' name='Raw_Material_Cost' ordinal='4' />
+              <column datatype='real' name='Factory_Labor_Costs' ordinal='5' />
+              <column datatype='real' name='Factory_Equipment_Rent_Costs' ordinal='6' />
+              <column datatype='real' name='Distribution_Costs' ordinal='7' />
+              <column datatype='real' name='Advertisement_Costs' ordinal='8' />
+              <column datatype='real' name='Retail_Price' ordinal='9' />
+              <column datatype='string' name='Category' ordinal='10' />
+              <column datatype='real' name='Running_Total_Revenue_2021_Percent' ordinal='11' />
+              <column datatype='string' name='ABC_2021' ordinal='12' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[2020_units_sold]' value='[Stock].[2020_units_sold]' />
+          <map key='[2021_start_stock]' value='[Stock].[2021_start_stock]' />
+          <map key='[ABC_2021]' value='[Stock].[ABC_2021]' />
+          <map key='[Advertisement_Costs]' value='[Stock].[Advertisement_Costs]' />
+          <map key='[Category]' value='[Stock].[Category]' />
+          <map key='[Customer_Country]' value='[Orders].[Customer_Country]' />
+          <map key='[Description]' value='[Stock].[Description]' />
+          <map key='[Distribution_Costs]' value='[Stock].[Distribution_Costs]' />
+          <map key='[Factory_Equipment_Rent_Costs]' value='[Stock].[Factory_Equipment_Rent_Costs]' />
+          <map key='[Factory_Labor_Costs]' value='[Stock].[Factory_Labor_Costs]' />
+          <map key='[Invoice_Date]' value='[Orders].[Invoice_Date]' />
+          <map key='[Invoice_No]' value='[Orders].[Invoice_No]' />
+          <map key='[Quantity]' value='[Orders].[Quantity]' />
+          <map key='[Raw_Material_Cost]' value='[Stock].[Raw_Material_Cost]' />
+          <map key='[Retail_Price]' value='[Stock].[Retail_Price]' />
+          <map key='[Running_Total_Revenue_2021_Percent]' value='[Stock].[Running_Total_Revenue_2021_Percent]' />
+          <map key='[SKU-ID (Stock)]' value='[Stock].[SKU-ID]' />
+          <map key='[SKU-ID]' value='[Orders].[SKU-ID]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:E13334:no:A1:E13334:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Stock]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:M105:no:A1:M105:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Invoice_No</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Invoice_No]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Invoice_No</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Orders_985B5471F2D743D79D006F8F635232C9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SKU-ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[SKU-ID]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>SKU-ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Orders_985B5471F2D743D79D006F8F635232C9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quantity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Quantity]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Quantity</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Orders_985B5471F2D743D79D006F8F635232C9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Invoice_Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Invoice_Date]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Invoice_Date</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Orders_985B5471F2D743D79D006F8F635232C9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer_Country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Customer_Country]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Customer_Country</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Orders_985B5471F2D743D79D006F8F635232C9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SKU-ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[SKU-ID (Stock)]</local-name>
+            <parent-name>[Stock]</parent-name>
+            <remote-alias>SKU-ID</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Description</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Description]</local-name>
+            <parent-name>[Stock]</parent-name>
+            <remote-alias>Description</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2020_units_sold</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2020_units_sold]</local-name>
+            <parent-name>[Stock]</parent-name>
+            <remote-alias>2020_units_sold</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2021_start_stock</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2021_start_stock]</local-name>
+            <parent-name>[Stock]</parent-name>
+            <remote-alias>2021_start_stock</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Raw_Material_Cost</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Raw_Material_Cost]</local-name>
+            <parent-name>[Stock]</parent-name>
+            <remote-alias>Raw_Material_Cost</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Factory_Labor_Costs</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Factory_Labor_Costs]</local-name>
+            <parent-name>[Stock]</parent-name>
+            <remote-alias>Factory_Labor_Costs</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Factory_Equipment_Rent_Costs</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Factory_Equipment_Rent_Costs]</local-name>
+            <parent-name>[Stock]</parent-name>
+            <remote-alias>Factory_Equipment_Rent_Costs</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Distribution_Costs</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Distribution_Costs]</local-name>
+            <parent-name>[Stock]</parent-name>
+            <remote-alias>Distribution_Costs</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Advertisement_Costs</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Advertisement_Costs]</local-name>
+            <parent-name>[Stock]</parent-name>
+            <remote-alias>Advertisement_Costs</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Retail_Price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Retail_Price]</local-name>
+            <parent-name>[Stock]</parent-name>
+            <remote-alias>Retail_Price</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Category</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Category]</local-name>
+            <parent-name>[Stock]</parent-name>
+            <remote-alias>Category</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Running_Total_Revenue_2021_Percent</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Running_Total_Revenue_2021_Percent]</local-name>
+            <parent-name>[Stock]</parent-name>
+            <remote-alias>Running_Total_Revenue_2021_Percent</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ABC_2021</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ABC_2021]</local-name>
+            <parent-name>[Stock]</parent-name>
+            <remote-alias>ABC_2021</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[2020_units_sold]' role='measure' type='quantitative' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[sum:2020_units_sold:qk]&quot;' value='2020' />
+          <alias key='&quot;[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[sum:Quantity:qk]&quot;' value='2021' />
+        </aliases>
+      </column>
+      <column caption='Sales_Growth' datatype='integer' name='[Calculation_1067353159231361024]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='sum([2020_units_sold])-SUM([Quantity])' />
+      </column>
+      <column caption='Left_in_Stock_2021' datatype='integer' name='[Calculation_1067353159232815105]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([2021_start_stock])-SUM([Quantity])' />
+      </column>
+      <column caption='Profit' datatype='real' name='[Calculation_1067353159233458178]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Retail_Price]-[Raw_Material_Cost]-[Factory_Equipment_Rent_Costs]-[Factory_Labor_Costs]-[Distribution_Costs]-[Advertisement_Costs]' />
+      </column>
+      <column caption='Total_Profit_2020' datatype='real' name='[Calculation_1067353159233888259]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_1067353159233458178]*[2020_units_sold]' />
+      </column>
+      <column caption='Total_Profit' datatype='real' name='[Calculation_1067353159239610374]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Total_Profit_2020 (copy)_1067353159235575813]+SUM([Calculation_1067353159233888259])' />
+      </column>
+      <column datatype='string' name='[Customer_Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='integer' name='[Quantity]' role='measure' type='quantitative' />
+      <column caption='Total_Profit_2021' datatype='real' name='[Total_Profit_2020 (copy)_1067353159235575813]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Calculation_1067353159233458178])*SUM([Quantity])' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='Orders' datatype='table' name='[__tableau_internal_object_id__].[Orders_985B5471F2D743D79D006F8F635232C9]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Stock' datatype='table' name='[__tableau_internal_object_id__].[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]' role='measure' type='quantitative' />
+      <column-instance column='[2020_units_sold]' derivation='Sum' name='[sum:2020_units_sold:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Quantity]' derivation='Sum' name='[sum:Quantity:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1067353159231361024]' derivation='User' name='[usr:Calculation_1067353159231361024:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='false' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/Leo/AppData/Local/Temp/TableauTemp/#TableauTemp_1ifqrgn1jy2dpi1bsrkge01divxn.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/06/2024 03:34:06 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Orders_985B5471F2D743D79D006F8F635232C9' table='[Extract].[Orders_985B5471F2D743D79D006F8F635232C9]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+            <relation name='Orders_985B5471F2D743D79D006F8F635232C9' table='[Extract].[Orders_985B5471F2D743D79D006F8F635232C9]' type='table' />
+            <relation name='Stock_FDA7FC4222074BB7BC41DDFD6ED67C83' table='[Extract].[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]' type='table' />
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <cols>
+            <map key='[2020_units_sold]' value='[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83].[2020_units_sold]' />
+            <map key='[2021_start_stock]' value='[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83].[2021_start_stock]' />
+            <map key='[ABC_2021]' value='[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83].[ABC_2021]' />
+            <map key='[Advertisement_Costs]' value='[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83].[Advertisement_Costs]' />
+            <map key='[Category]' value='[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83].[Category]' />
+            <map key='[Customer_Country]' value='[Orders_985B5471F2D743D79D006F8F635232C9].[Customer_Country]' />
+            <map key='[Description]' value='[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83].[Description]' />
+            <map key='[Distribution_Costs]' value='[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83].[Distribution_Costs]' />
+            <map key='[Factory_Equipment_Rent_Costs]' value='[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83].[Factory_Equipment_Rent_Costs]' />
+            <map key='[Factory_Labor_Costs]' value='[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83].[Factory_Labor_Costs]' />
+            <map key='[Invoice_Date]' value='[Orders_985B5471F2D743D79D006F8F635232C9].[Invoice_Date]' />
+            <map key='[Invoice_No]' value='[Orders_985B5471F2D743D79D006F8F635232C9].[Invoice_No]' />
+            <map key='[Quantity]' value='[Orders_985B5471F2D743D79D006F8F635232C9].[Quantity]' />
+            <map key='[Raw_Material_Cost]' value='[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83].[Raw_Material_Cost]' />
+            <map key='[Retail_Price]' value='[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83].[Retail_Price]' />
+            <map key='[Running_Total_Revenue_2021_Percent]' value='[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83].[Running_Total_Revenue_2021_Percent]' />
+            <map key='[SKU-ID (Stock)]' value='[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83].[SKU-ID]' />
+            <map key='[SKU-ID]' value='[Orders_985B5471F2D743D79D006F8F635232C9].[SKU-ID]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Invoice_No</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Invoice_No]</local-name>
+              <parent-name>[Orders_985B5471F2D743D79D006F8F635232C9]</parent-name>
+              <remote-alias>Invoice_No</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Orders</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3964</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Orders_985B5471F2D743D79D006F8F635232C9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SKU-ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[SKU-ID]</local-name>
+              <parent-name>[Orders_985B5471F2D743D79D006F8F635232C9]</parent-name>
+              <remote-alias>SKU-ID</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>122</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LRU_RRU' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Orders_985B5471F2D743D79D006F8F635232C9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Quantity</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Quantity]</local-name>
+              <parent-name>[Orders_985B5471F2D743D79D006F8F635232C9]</parent-name>
+              <remote-alias>Quantity</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Orders</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>84</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Orders_985B5471F2D743D79D006F8F635232C9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Invoice_Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Invoice_Date]</local-name>
+              <parent-name>[Orders_985B5471F2D743D79D006F8F635232C9]</parent-name>
+              <remote-alias>Invoice_Date</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Orders</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>417</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Orders_985B5471F2D743D79D006F8F635232C9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Customer_Country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Customer_Country]</local-name>
+              <parent-name>[Orders_985B5471F2D743D79D006F8F635232C9]</parent-name>
+              <remote-alias>Customer_Country</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3487</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LRU_RRU' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Orders_985B5471F2D743D79D006F8F635232C9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SKU-ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[SKU-ID (Stock)]</local-name>
+              <parent-name>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</parent-name>
+              <remote-alias>SKU-ID</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Stock</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>104</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LRU_RRU' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Description</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Description]</local-name>
+              <parent-name>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</parent-name>
+              <remote-alias>Description</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Stock</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>104</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LRU_RRU' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>2020_units_sold</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[2020_units_sold]</local-name>
+              <parent-name>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</parent-name>
+              <remote-alias>2020_units_sold</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Stock</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>102</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>2021_start_stock</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[2021_start_stock]</local-name>
+              <parent-name>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</parent-name>
+              <remote-alias>2021_start_stock</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Stock</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>98</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Raw_Material_Cost</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Raw_Material_Cost]</local-name>
+              <parent-name>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</parent-name>
+              <remote-alias>Raw_Material_Cost</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Stock</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>78</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Factory_Labor_Costs</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Factory_Labor_Costs]</local-name>
+              <parent-name>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</parent-name>
+              <remote-alias>Factory_Labor_Costs</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Stock</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>85</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Factory_Equipment_Rent_Costs</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Factory_Equipment_Rent_Costs]</local-name>
+              <parent-name>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</parent-name>
+              <remote-alias>Factory_Equipment_Rent_Costs</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Stock</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>63</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Distribution_Costs</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Distribution_Costs]</local-name>
+              <parent-name>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</parent-name>
+              <remote-alias>Distribution_Costs</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Stock</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>102</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Advertisement_Costs</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Advertisement_Costs]</local-name>
+              <parent-name>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</parent-name>
+              <remote-alias>Advertisement_Costs</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Stock</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>102</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Retail_Price</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Retail_Price]</local-name>
+              <parent-name>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</parent-name>
+              <remote-alias>Retail_Price</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Stock</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>57</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Category]</local-name>
+              <parent-name>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</parent-name>
+              <remote-alias>Category</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Stock</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LRU_RRU' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Running_Total_Revenue_2021_Percent</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Running_Total_Revenue_2021_Percent]</local-name>
+              <parent-name>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</parent-name>
+              <remote-alias>Running_Total_Revenue_2021_Percent</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Stock</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>98</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ABC_2021</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ABC_2021]</local-name>
+              <parent-name>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</parent-name>
+              <remote-alias>ABC_2021</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Stock</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LRU_RRU' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[sum:2020_units_sold:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[usr:Calculation_1067353159231361024:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[sum:Quantity:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Israel&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Orders' id='Orders_985B5471F2D743D79D006F8F635232C9'>
+            <properties context=''>
+              <relation connection='excel-direct.10hm6q013jiqcf1cbkj2y03ftrs7' name='Orders' table='[Orders$]' type='table'>
+                <columns gridOrigin='A1:E13334:no:A1:E13334:0' header='yes' outcome='2'>
+                  <column datatype='integer' name='Invoice_No' ordinal='0' />
+                  <column datatype='string' name='SKU-ID' ordinal='1' />
+                  <column datatype='integer' name='Quantity' ordinal='2' />
+                  <column datatype='date' name='Invoice_Date' ordinal='3' />
+                  <column datatype='string' name='Customer_Country' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Orders_985B5471F2D743D79D006F8F635232C9' table='[Extract].[Orders_985B5471F2D743D79D006F8F635232C9]' type='table' />
+            </properties>
+          </object>
+          <object caption='Stock' id='Stock_FDA7FC4222074BB7BC41DDFD6ED67C83'>
+            <properties context=''>
+              <relation connection='excel-direct.10hm6q013jiqcf1cbkj2y03ftrs7' name='Stock' table='[Stock$]' type='table'>
+                <columns gridOrigin='A1:M105:no:A1:M105:0' header='yes' outcome='2'>
+                  <column datatype='string' name='SKU-ID' ordinal='0' />
+                  <column datatype='string' name='Description' ordinal='1' />
+                  <column datatype='integer' name='2020_units_sold' ordinal='2' />
+                  <column datatype='integer' name='2021_start_stock' ordinal='3' />
+                  <column datatype='real' name='Raw_Material_Cost' ordinal='4' />
+                  <column datatype='real' name='Factory_Labor_Costs' ordinal='5' />
+                  <column datatype='real' name='Factory_Equipment_Rent_Costs' ordinal='6' />
+                  <column datatype='real' name='Distribution_Costs' ordinal='7' />
+                  <column datatype='real' name='Advertisement_Costs' ordinal='8' />
+                  <column datatype='real' name='Retail_Price' ordinal='9' />
+                  <column datatype='string' name='Category' ordinal='10' />
+                  <column datatype='real' name='Running_Total_Revenue_2021_Percent' ordinal='11' />
+                  <column datatype='string' name='ABC_2021' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Stock_FDA7FC4222074BB7BC41DDFD6ED67C83' table='[Extract].[Stock_FDA7FC4222074BB7BC41DDFD6ED67C83]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[SKU-ID]' />
+              <expression op='[SKU-ID (Stock)]' />
+            </expression>
+            <first-end-point object-id='Orders_985B5471F2D743D79D006F8F635232C9' />
+            <second-end-point object-id='Stock_FDA7FC4222074BB7BC41DDFD6ED67C83' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Profit'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Orders+ (Acropolis_Retail_data_update)' name='federated.002mj8e1mjwkjw16j0oax0ek6l3t' />
+          </datasources>
+          <datasource-dependencies datasource='federated.002mj8e1mjwkjw16j0oax0ek6l3t'>
+            <column datatype='integer' name='[2020_units_sold]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Advertisement_Costs]' role='measure' type='quantitative' />
+            <column caption='Profit' datatype='real' name='[Calculation_1067353159233458178]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Retail_Price]-[Raw_Material_Cost]-[Factory_Equipment_Rent_Costs]-[Factory_Labor_Costs]-[Distribution_Costs]-[Advertisement_Costs]' />
+            </column>
+            <column caption='Total_Profit_2020' datatype='real' name='[Calculation_1067353159233888259]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_1067353159233458178]*[2020_units_sold]' />
+            </column>
+            <column caption='Total_Profit' datatype='real' name='[Calculation_1067353159239610374]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Total_Profit_2020 (copy)_1067353159235575813]+SUM([Calculation_1067353159233888259])' />
+            </column>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Description]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Distribution_Costs]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Factory_Equipment_Rent_Costs]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Factory_Labor_Costs]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Quantity]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Raw_Material_Cost]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Retail_Price]' role='measure' type='quantitative' />
+            <column caption='Total_Profit_2021' datatype='real' name='[Total_Profit_2020 (copy)_1067353159235575813]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_1067353159233458178])*SUM([Quantity])' />
+            </column>
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Description]' derivation='None' name='[none:Description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1067353159233888259]' derivation='Sum' name='[sum:Calculation_1067353159233888259:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1067353159239610374]' derivation='User' name='[usr:Calculation_1067353159239610374:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total_Profit_2020 (copy)_1067353159235575813]' derivation='User' name='[usr:Total_Profit_2020 (copy)_1067353159235575813:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[none:Description:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Description:nk]' />
+              <groupfilter function='member' level='[none:Description:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[none:Description:nk]' direction='ASC' measure-to-sort-by='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[usr:Calculation_1067353159239610374:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[none:Description:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[usr:Total_Profit_2020 (copy)_1067353159235575813:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[usr:Total_Profit_2020 (copy)_1067353159235575813:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[sum:Calculation_1067353159233888259:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[sum:Calculation_1067353159233888259:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='7' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[usr:Calculation_1067353159239610374:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[usr:Calculation_1067353159239610374:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.002mj8e1mjwkjw16j0oax0ek6l3t].[none:Description:nk] / [federated.002mj8e1mjwkjw16j0oax0ek6l3t].[none:Category:nk])</rows>
+        <cols>([federated.002mj8e1mjwkjw16j0oax0ek6l3t].[usr:Total_Profit_2020 (copy)_1067353159235575813:qk] + ([federated.002mj8e1mjwkjw16j0oax0ek6l3t].[sum:Calculation_1067353159233888259:qk] + [federated.002mj8e1mjwkjw16j0oax0ek6l3t].[usr:Calculation_1067353159239610374:qk]))</cols>
+      </table>
+      <simple-id uuid='{EB95C533-AC0F-4905-A648-0072F16A1DFD}' />
+    </worksheet>
+    <worksheet name='Sales_growth'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Orders+ (Acropolis_Retail_data_update)' name='federated.002mj8e1mjwkjw16j0oax0ek6l3t' />
+          </datasources>
+          <datasource-dependencies datasource='federated.002mj8e1mjwkjw16j0oax0ek6l3t'>
+            <column datatype='integer' name='[2020_units_sold]' role='measure' type='quantitative' />
+            <column caption='Sales_Growth' datatype='integer' name='[Calculation_1067353159231361024]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='sum([2020_units_sold])-SUM([Quantity])' />
+            </column>
+            <column datatype='string' name='[Description]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Quantity]' role='measure' type='quantitative' />
+            <column-instance column='[Description]' derivation='None' name='[none:Description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1067353159231361024]' derivation='User' name='[usr:Calculation_1067353159231361024:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[none:Description:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Description:nk]' />
+              <groupfilter function='member' level='[none:Description:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[none:Description:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[usr:Calculation_1067353159231361024:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[none:Description:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[usr:Calculation_1067353159231361024:qk]' />
+              <text column='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[usr:Calculation_1067353159231361024:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[none:Description:nk]</rows>
+        <cols>[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[usr:Calculation_1067353159231361024:qk]</cols>
+      </table>
+      <simple-id uuid='{84184B5A-B87D-4BFC-A47D-860340AEBB52}' />
+    </worksheet>
+    <worksheet name='Sales_over_Years'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Orders+ (Acropolis_Retail_data_update)' name='federated.002mj8e1mjwkjw16j0oax0ek6l3t' />
+          </datasources>
+          <datasource-dependencies datasource='federated.002mj8e1mjwkjw16j0oax0ek6l3t'>
+            <column datatype='integer' name='[2020_units_sold]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Description]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Quantity]' role='measure' type='quantitative' />
+            <column-instance column='[Description]' derivation='None' name='[none:Description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[2020_units_sold]' derivation='Sum' name='[sum:2020_units_sold:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Quantity]' derivation='Sum' name='[sum:Quantity:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[none:Description:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[sum:2020_units_sold:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[sum:Quantity:qk]' field-type='quantitative' fold='true' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[:Measure Names]' value='Year'>
+              <formatted-text>
+                <run>Year</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[sum:2020_units_sold:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[sum:Quantity:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[none:Description:nk]</rows>
+        <cols>([federated.002mj8e1mjwkjw16j0oax0ek6l3t].[sum:2020_units_sold:qk] + [federated.002mj8e1mjwkjw16j0oax0ek6l3t].[sum:Quantity:qk])</cols>
+      </table>
+      <simple-id uuid='{DB7526F3-7C27-449B-BEF1-74F112B2330D}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Orders+ (Acropolis_Retail_data_update)' name='federated.002mj8e1mjwkjw16j0oax0ek6l3t' />
+          </datasources>
+          <datasource-dependencies datasource='federated.002mj8e1mjwkjw16j0oax0ek6l3t'>
+            <column datatype='real' name='[Advertisement_Costs]' role='measure' type='quantitative' />
+            <column caption='Profit' datatype='real' name='[Calculation_1067353159233458178]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Retail_Price]-[Raw_Material_Cost]-[Factory_Equipment_Rent_Costs]-[Factory_Labor_Costs]-[Distribution_Costs]-[Advertisement_Costs]' />
+            </column>
+            <column datatype='string' name='[Description]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Distribution_Costs]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Factory_Equipment_Rent_Costs]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Factory_Labor_Costs]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Raw_Material_Cost]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Retail_Price]' role='measure' type='quantitative' />
+            <column-instance column='[Description]' derivation='None' name='[none:Description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1067353159233458178]' derivation='Sum' name='[sum:Calculation_1067353159233458178:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[none:Description:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[sum:Calculation_1067353159233458178:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[sum:Calculation_1067353159233458178:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[none:Description:nk]</rows>
+        <cols>[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[sum:Calculation_1067353159233458178:qk]</cols>
+      </table>
+      <simple-id uuid='{F10495A2-A505-4F7D-B0D5-DFDF0EE382A9}' />
+    </worksheet>
+    <worksheet name='Stock_Left_2021'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Orders+ (Acropolis_Retail_data_update)' name='federated.002mj8e1mjwkjw16j0oax0ek6l3t' />
+          </datasources>
+          <datasource-dependencies datasource='federated.002mj8e1mjwkjw16j0oax0ek6l3t'>
+            <column datatype='integer' name='[2021_start_stock]' role='measure' type='quantitative' />
+            <column caption='Left_in_Stock_2021' datatype='integer' name='[Calculation_1067353159232815105]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([2021_start_stock])-SUM([Quantity])' />
+            </column>
+            <column datatype='string' name='[Description]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Quantity]' role='measure' type='quantitative' />
+            <column-instance column='[Description]' derivation='None' name='[none:Description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1067353159232815105]' derivation='User' name='[usr:Calculation_1067353159232815105:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[none:Description:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Description:nk]' />
+              <groupfilter function='member' level='[none:Description:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[none:Description:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[usr:Calculation_1067353159232815105:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[none:Description:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[none:Description:nk]</rows>
+        <cols>[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[usr:Calculation_1067353159232815105:qk]</cols>
+      </table>
+      <simple-id uuid='{69BA6A73-484C-4DAD-A2C3-2D43166E1304}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sales_over_Years'>
+      <cards>
+        <edge name='left'>
+          <strip size='200'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='39'>
+            <card type='columns' />
+          </strip>
+          <strip size='39'>
+            <card type='rows' />
+          </strip>
+          <strip size='38'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FCF68E6D-B8E7-4A55-B0C8-98DEE8F82DCA}' />
+    </window>
+    <window class='worksheet' name='Sales_growth'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[usr:Calculation_1067353159231361024:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CB96E615-C94E-401F-9B2F-A0BBFE47752E}' />
+    </window>
+    <window class='worksheet' name='Stock_Left_2021'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{19745558-E2EE-4120-BFFE-DA337C724474}' />
+    </window>
+    <window class='worksheet' name='Profit'>
+      <cards>
+        <edge name='left'>
+          <strip size='269'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='39'>
+            <card type='columns' />
+          </strip>
+          <strip size='39'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='5' param='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[usr:Total_Profit_2020 (copy)_1067353159235575813:qk]' type='color' />
+            <card pane-specification-id='6' param='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[sum:Calculation_1067353159233888259:qk]' type='color' />
+            <card pane-specification-id='7' param='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[usr:Calculation_1067353159239610374:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{00D60F7D-A35A-469A-91F6-0DEF01922108}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.002mj8e1mjwkjw16j0oax0ek6l3t].[sum:Calculation_1067353159233458178:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2D6F3CB6-CF80-481E-A65A-D8389CCEAE75}' />
+    </window>
+  </windows>
+</workbook>
